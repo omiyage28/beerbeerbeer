@@ -1,0 +1,22 @@
+<div class="card">
+  <%= link_to image_tag(image.image, class: :card__img ), image_path(image.id)%>
+  <div class="card__body">
+    <%= link_to image.title, image_path(image.id), class: :card__title%>
+    <div class="article-genre">
+      <%= image.prefecture.name + "産" %>
+    </div>
+
+    <div class="article-genre">
+    <%= image.feature.name %>
+    </div>
+
+  <% if user_signed_in? %>
+   <% if current_user.liked_by?(image.id) %>
+  <td ><%= link_to 'good!をはずす', destroy_like_path(image), method: :DELETE, class: :good_remove_btn %> <%= image.likes.count %></td>
+   <% else %> 
+  <td ><%= link_to 'good!', create_like_path(image), method: :POST, class: :good_btn %> <%= image.likes.count %></td>
+  <% end %>
+ <% end %>
+  </div>
+  
+</div>

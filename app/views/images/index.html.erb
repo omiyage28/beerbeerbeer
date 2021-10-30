@@ -1,0 +1,35 @@
+ <div class="title_search">
+ <p class=title_serch_>TITLE</p>
+ <%= form_with(url: search_images_path, local: true, method: :get, class: "search-form") do |form| %>
+ <%= form.text_field :keyword, placeholder: "title search...", class: "search-input" %>
+ <%= form.submit "SEARCH", class: "search-btn" %>
+<% end %>
+</div>
+
+<div class="prefecture_search">
+<p class="prefecture_search_">PREFECTURE</p>
+<%= search_form_for @q, url: image_prefecture_path do |f| %>
+<%= f.collection_select :prefecture_id_eq, Prefecture.where.not(id: 0), :id, :name %>
+<%= f.submit 'SEARCH' %>
+<% end %>
+</div>
+
+
+<h1 class="Posts"> POSTs </h1>
+
+<div class="ranking">
+<h3 class="ranking_name">Good Ranking</h3>
+ <div class=ranking_order>
+  <% @all_ranks.each.with_index(1) do |image, i| %>
+    <p class=ranking_number>No.<%= i %></p>
+   <%= image.title%>
+  <%end%>
+ </div>
+</div>
+<main class="main">
+  <div class="inner">
+    <div class="card__wrapper">
+     <%= render partial: "image", collection: @image %>
+    </div>
+  </div>
+</main>

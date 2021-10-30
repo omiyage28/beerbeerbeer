@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+    
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">NAME</th>
+            <td class="table__col2"><%= @user.name  %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="page-heading">
+        <%= "#{@user.name} POSTS"%>
+      </h2>
+      <div class="user__card">
+       <%= render partial: "images/image", collection: @images %>
+      </div>
+    </div>
+  </div>
+</div>

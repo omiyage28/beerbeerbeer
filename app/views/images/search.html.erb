@@ -1,0 +1,6 @@
+
+<div class="contents row">
+  <% @images.each do |image| %>
+    <%= render partial: "image", locals: { image: image } %>
+  <% end %>
+</div>
