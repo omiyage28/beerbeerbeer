@@ -22,7 +22,7 @@
  <div class=ranking_order>
   <% @all_ranks.each.with_index(1) do |image, i| %>
     <p class=ranking_number>No.<%= i %></p>
-   <%= image.title%>
+   <%= link_to image.title,image_path(image.id) %>
   <%end%>
  </div>
 </div>

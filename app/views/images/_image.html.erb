@@ -15,7 +15,7 @@
   <td ><%= link_to 'good!をはずす', destroy_like_path(image), method: :DELETE, class: :good_remove_btn %> <%= image.likes.count %></td>
    <% else %> 
   <td ><%= link_to 'good!', create_like_path(image), method: :POST, class: :good_btn %> <%= image.likes.count %></td>
-  <% end %>
+ <% end %>
  <% end %>
   </div>
   

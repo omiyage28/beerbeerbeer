@@ -58,6 +58,10 @@ a {
     background: linear-gradient(to right, rgb(255, 186, 115), transparent);
     color: #545454;
 }
+.description{
+  border-bottom: double;
+  border-color: #dda711;
+}
 
 .nav__btn{
   display: inline-block;
@@ -178,6 +182,9 @@ a {
   width: calc((100% - 30px) / 3);
   margin-bottom: 40px;
 }
+
+  
+
 .card__img {
   margin-bottom: 16px;
 }
@@ -222,7 +229,7 @@ a {
 
 .Posts{
   text-align: center;
-margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .ranking_name{
@@ -494,4 +501,23 @@ a.kyushu	{ background-color: #ffc0ff; }
 
 .Posts{
   margin-top: 50px ;
+}
+
+
+.prefecture__search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 161px);
+}
+
+
+.prototype__image_prefecture{
+  
+  text-align: center;
+}
+
+.search_row{
+  text-align: center;
 }
