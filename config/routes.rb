@@ -17,6 +17,6 @@ get '/image/feature', to: "images#feature"
       get 'search'
     end
   end
-  resources :users, only: [:show]
+  resources :users, only: [:show, :destroy]
   
 end
