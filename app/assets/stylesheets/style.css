@@ -162,6 +162,15 @@ a {
   font-size: 20px;
   }
 
+.feature_search{
+  text-align: right;
+  margin-right: 150px;
+ }
+
+ .feature_search_{
+  margin-right: 150px;
+  margin-top: 15px;
+}
 
   
 .main{
@@ -229,7 +238,7 @@ a {
 
 .Posts{
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .ranking_name{
@@ -512,8 +521,21 @@ a.kyushu	{ background-color: #ffc0ff; }
   min-height: calc(100vh - 161px);
 }
 
+.feature__search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 161px);
+}
+
 
 .prototype__image_prefecture{
+  
+  text-align: center;
+}
+
+.prototype__image_feature{
   
   text-align: center;
 }

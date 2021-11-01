@@ -5,7 +5,7 @@ root to: "images#index"
 
 
 get '/image/prefecture', to: "images#prefecture"
- 
+get '/image/feature', to: "images#feature"
  
  
   get '/images/map', to: "images#map"

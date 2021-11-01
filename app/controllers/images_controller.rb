@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search, :prefecture, :hashtag, :map]
-  before_action :search_prefecture_image, only: [:index, :prefecture, :hashtag, :search, :show]
+  before_action :search_image, only: [:index, :prefecture, :feature]
   
 
 
@@ -68,7 +68,11 @@ def prefecture
 end
 
 
-
+def feature
+  @images = @q.result
+  feature_id = params[:q][:feature_id_eq]
+  @feature = Feature.find_by(id: feature_id)
+end
 
 
 
@@ -88,7 +92,7 @@ end
 
   
 
-  def search_prefecture_image
+  def search_image
     @q = Image.ransack(params[:q])
   end
 

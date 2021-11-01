@@ -1,0 +1,10 @@
+<h2><%= @feature.name %></h2>
+
+  <div class="feature__search">
+    <div class="prototype__image_feature">
+  
+    <% @images.each do |image| %>
+          <%= render partial: "image", locals: { image: image } %>
+    <% end %>
+   </div>
+  </div>
