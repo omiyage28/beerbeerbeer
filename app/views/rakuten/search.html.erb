@@ -1,0 +1,16 @@
+<table>
+ <thead>
+  <tr>
+   <th>ITEM LISTs</th>
+  </tr>
+ </thead>
+<tbody>
+  <% if @items.present? %>
+   <% @items.each do |item| %>
+    <tr>
+      <td><%= link_to item.name, "#{item.url}" %></td>
+    </tr>
+  <% end %>
+ <% end %>
+</tbody>
+</table>

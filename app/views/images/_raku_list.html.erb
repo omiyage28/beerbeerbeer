@@ -1,0 +1,12 @@
+<% if @images.present? %>
+  <% @images.each do |image| %>
+    <div class="list">
+    <% if image.image_url %>
+      <%= link_to (image_tag(image.image_url, style: "width: 70px;height: 100px;display: inline-block;")), image.url %>
+      <%end%>
+
+      <%= item.title %>
+      <%= item[“mediumImageUrls”][0] %>
+    </div>
+  <% end %>
+<% end %>

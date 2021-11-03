@@ -51,6 +51,9 @@ class ImagesController < ApplicationController
 
   def search
     @images = Image.search(params[:keyword])
+    if params[:keyword]
+      @items = RakutenWebService::Ichiba::Item.search(keyword: params[:keyword])
+    end  
   end
 
 
@@ -58,7 +61,8 @@ def map
 end
 
 
-
+def rakuten
+end
 
 
 def prefecture

@@ -1,5 +1,6 @@
 class LikesController < ApplicationController
   before_action :image_params
+  before_action :authenticate_user!
 
   def create
     Like.create(user_id: current_user.id, image_id: params[:id])

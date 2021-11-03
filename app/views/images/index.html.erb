@@ -22,6 +22,15 @@
 <% end %>
 </div>
 
+<div class="rakuten_search">
+<p class="rakuten_search_">RAKUSEARCH</p>
+<%= form_tag :rakuten_search, method: :get do  %>
+<%= text_field_tag 'keyword', params[:keyword] %>
+<%= submit_tag "SEARCH" %>
+<% end %>
+</div>
+
+
 <h1 class="Posts"> POSTs </h1>
 
 <div class="ranking">

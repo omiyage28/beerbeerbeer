@@ -172,6 +172,16 @@ a {
   margin-top: 15px;
 }
 
+.rakuten_search{
+  text-align: right;
+  margin-right: 150px;
+ }
+
+ .rakuten_search_{
+  margin-right: 150px;
+  margin-top: 15px;
+  color: red;
+}
   
 .main{
   background-color: #f0f7f3;

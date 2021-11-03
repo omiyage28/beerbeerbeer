@@ -65,3 +65,7 @@ gem 'active_hash'
 gem 'ransack'
 
 gem 'pry-rails'
+
+gem 'jquery-rails'
+
+gem 'rakuten_web_service'
