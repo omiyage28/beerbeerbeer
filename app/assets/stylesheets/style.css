@@ -74,10 +74,12 @@ a {
   border-radius: 3px;
   transition: 0.4s ease;
 }
-.nav__btn:hover{
-  color: #fff;
-  background: #dda711;
+
+.nav__btn_signup{
+  color: rgb(223, 20, 20);
+  font-size: 1.3em;
 }
+
 
 .nav__logout{
   display: inline-block;
