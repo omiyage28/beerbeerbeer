@@ -48,23 +48,6 @@
 - belongs_to :image
 - belongs_to :user
 
-## image_tag_relations テーブル
-
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| image       | references | null: false, foreign_key: true |
-| tag         | references | null: false, foreign_key: true |
-
-- belongs_to :image
-- belongs_to :tag
-
-## tags テーブル
-
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| name        | string     | null: false                    |
-
-- has_many :image_tag_relations
 
 
 ## image_likes テーブル
