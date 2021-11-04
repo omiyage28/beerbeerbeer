@@ -4,22 +4,26 @@
       <p class="prototype__hedding">
         <%= @image.title%>
       </p>
-      <%= link_to @image.user.name , user_path(@image.user.id), class: :prototype__user %>
-     <% if user_signed_in? && current_user.id == @image.user_id %>
-        <div class="prototype__manage">
-          <%= link_to "編集する", edit_image_path(@image.id), class: :prototype__btn %>
-          <%= link_to "削除する", image_path(@image.id), method: :delete ,class: :prototype__btn %>
-        </div>
-     <% end %>
+      
       <div class="prototype__image">
         <%= image_tag(@image.image, class: :card__img) %>
       </div>
+
+    <%= link_to @image.user.name , user_path(@image.user.id), class: :prototype__user %>
+     <% if user_signed_in? && current_user.id == @image.user_id %>
+        <div class="prototype__manage">
+          <%= link_to "edit", edit_image_path(@image.id), class: :prototype__btn %>
+          <%= link_to "delete", image_path(@image.id), method: :delete ,class: :prototype__btn %>
+        </div>
+     <% end %>
+
       <div class="prototype__body">
         <div class="prototype__detail">
           <p class="detail__title">CONTENT</p>
           <p class="detail__message">
             <%= @image.content %>
           </p>
+          <p class="detail__prefecture">PREFECTURE</p>
           <%=@image.prefecture.name%>
         </div>
       </div>
@@ -28,22 +32,23 @@
         <% if user_signed_in? %>
          <%= form_with(model: [@image, @comment], local: true) do |f|%>
             <div class="field">
-              <%= f.label :text, "コメント" %><br />
+              <%= f.label :text, "COMMENTS" %><br />
              <%= f.text_field :text, id:"comment_content" %>
             </div>
             <div class="actions">
-              <%= f.submit "送信する", class: :form__btn  %>
+              <%= f.submit "POST", class: :form__btn  %>
             </div>
        <% end %>
         
         <ul class="comments_lists">
-          
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.text %>
-              <%= link_to comment.user.name, "/users/#{comment.user_id}", class: :comment_user %>
+              <% if comment.user == current_user %>
+               <%= link_to "delete", image_comment_path(@image,comment), method: :delete ,class: :comment__delete_btn %>
             </li>
-      <% end %>
+              <% end %> 
+           <% end %>
         </ul>
      <% end %>
       </div>
