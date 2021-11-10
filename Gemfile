@@ -69,3 +69,5 @@ gem 'pry-rails'
 gem 'jquery-rails'
 
 gem 'rakuten_web_service'
+
+gem "aws-sdk-s3", require: false
