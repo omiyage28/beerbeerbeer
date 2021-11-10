@@ -139,6 +139,15 @@ a {
 }
 
 /* メイン */
+.home {
+  margin-left: 100px;
+  width: 100vw;
+  height: 48vh;
+  background-image:url("https://1.bp.blogspot.com/-G-47R9swbTI/XZR9UPAtxSI/AAAAAAABVRQ/Us_4-1XslXMR-4O2kdhkceZzHGkWaKWgACNcBGAsYHQ/s1600/drink_craft_beer_glass.png");
+  background-repeat: no-repeat;
+  
+}
+
 
 .title_search{
   text-align: right;
@@ -379,11 +388,13 @@ a {
 }
 .comments_lists{
   padding-left: 20px;
+  
 }
 
 .comments_list{
   list-style-type: square;
   padding-bottom: 5px;
+  list-style: none;
 }
 
 .comment_user{
@@ -566,3 +577,4 @@ a.kyushu	{ background-color: #ffc0ff; }
 .search_row{
   text-align: center;
 }
+

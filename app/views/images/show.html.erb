@@ -12,18 +12,18 @@
     <%= link_to @image.user.name , user_path(@image.user.id), class: :prototype__user %>
      <% if user_signed_in? && current_user.id == @image.user_id %>
         <div class="prototype__manage">
-          <%= link_to "edit", edit_image_path(@image.id), class: :prototype__btn %>
-          <%= link_to "delete", image_path(@image.id), method: :delete ,class: :prototype__btn %>
+          <%= link_to "EDIT", edit_image_path(@image.id), class: :prototype__btn %>
+          <%= link_to "DELETE", image_path(@image.id), method: :delete ,class: :prototype__btn %>
         </div>
      <% end %>
 
       <div class="prototype__body">
         <div class="prototype__detail">
-          <p class="detail__title">CONTENT</p>
+          <p class="detail__title">content</p>
           <p class="detail__message">
             <%= @image.content %>
           </p>
-          <p class="detail__prefecture">PREFECTURE</p>
+          <p class="detail__prefecture">prefecture</p>
           <%=@image.prefecture.name%>
         </div>
       </div>

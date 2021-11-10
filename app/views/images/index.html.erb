@@ -1,18 +1,19 @@
+<div class= "home">
  <div class="title_search">
- <p class=title_serch_>TITLE</p>
- <%= form_with(url: search_images_path, local: true, method: :get, class: "search-form") do |form| %>
- <%= form.text_field :keyword, placeholder: "title search...", class: "search-input" %>
- <%= form.submit "SEARCH", class: "search-btn" %>
-<% end %>
-</div>
+  <p class=title_serch_>TITLE</p>
+  <%= form_with(url: search_images_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "title...", class: "search-input" %>
+  <%= form.submit "SEARCH", class: "search-btn" %>
+  <% end %>
+ </div>
 
-<div class="prefecture_search">
-<p class="prefecture_search_">PREFECTURE</p>
-<%= search_form_for @q, url: image_prefecture_path do |f| %>
-<%= f.collection_select :prefecture_id_eq, Prefecture.where.not(id: 0), :id, :name %>
-<%= f.submit 'SEARCH' %>
-<% end %>
-</div>
+ <div class="prefecture_search">
+  <p class="prefecture_search_">PREFECTURE</p>
+  <%= search_form_for @q, url: image_prefecture_path do |f| %>
+  <%= f.collection_select :prefecture_id_eq, Prefecture.where.not(id: 0), :id, :name %>
+  <%= f.submit 'SEARCH' %>
+  <% end %>
+ </div>
 
 <div class="feature_search">
 <p class="feature_search_">FEATURE</p>
@@ -23,13 +24,13 @@
 </div>
 
 <div class="rakuten_search">
-<p class="rakuten_search_">RAKUSEARCH</p>
+<p class="rakuten_search_">RAKUTEN SEARCH</p>
 <%= form_tag :rakuten_search, method: :get do  %>
-<%= text_field_tag 'keyword', params[:keyword] %>
+<%= text_field_tag 'keyword', params[:keyword] , placeholder: "rakuten..." %>
 <%= submit_tag "SEARCH" %>
 <% end %>
 </div>
-
+</div>
 
 <h1 class="Posts"> POSTs </h1>
 
