@@ -51,9 +51,6 @@ class ImagesController < ApplicationController
 
   def search
     @images = Image.search(params[:keyword])
-    if params[:keyword]
-      @items = RakutenWebService::Ichiba::Item.search(keyword: params[:keyword])
-    end  
   end
 
 
@@ -93,16 +90,8 @@ end
     end
   end
 
-
-  
-
   def search_image
     @q = Image.ransack(params[:q])
   end
-
-
-
-
-
 
 end
