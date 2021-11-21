@@ -94,4 +94,6 @@ end
     @q = Image.ransack(params[:q])
   end
 
+
+  
 end
