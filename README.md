@@ -22,6 +22,8 @@ PW    "aaa111"
 ### 新規投稿機能
 [![Image from Gyazo](https://i.gyazo.com/8521395512a9cf7803207b080d6893d4.gif)](https://gyazo.com/8521395512a9cf7803207b080d6893d4)
 
+### インフラ(開発環境)
+[![Image from Gyazo](https://i.gyazo.com/f49340b3d25b72f7050730fc7686e289.png)](https://gyazo.com/f49340b3d25b72f7050730fc7686e289)
 
 ## 工夫したポイント
   画像投稿だけではなく、いいね機能やランキング機能も実装しました。また、気になるビールがあればすぐに購入できるようにAPIを使用して楽天市場の検索機能も実装しました。
@@ -37,6 +39,11 @@ GitHub, GitHubDesktop
 RSpec
 ### エディタ
 VSCode
+### インフラ
+Docker
+
+
+
 
 ### 課題や今後実装したい機能
 Ajaxを使用して非同期いいね機能の実装と
